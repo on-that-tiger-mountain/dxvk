@@ -1,5 +1,7 @@
 #pragma once
 
+#include <utility>
+
 #include "vulkan_loader_fn.h"
 
 namespace dxvk::vk {
