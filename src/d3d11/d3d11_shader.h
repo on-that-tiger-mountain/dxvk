@@ -98,7 +98,7 @@ namespace dxvk {
     }
     
     void STDMETHODCALLTYPE GetDevice(ID3D11Device **ppDevice) final {
-      *ppDevice = m_device.ref();
+//      *ppDevice = m_device.ref();
     }
     
     const D3D11CommonShader* GetCommonShader() const {
