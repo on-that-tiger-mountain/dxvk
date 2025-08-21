@@ -119,6 +119,9 @@ namespace dxvk {
 
     /// Forces an MSAA level on the swapchain
     int32_t forceSwapchainMSAA;
+
+    /// Chinese Paladin 4
+    bool playingChinesePaladin4;
   };
 
 }
