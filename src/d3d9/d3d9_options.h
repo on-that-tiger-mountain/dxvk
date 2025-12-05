@@ -160,6 +160,9 @@ namespace dxvk {
 
     /// Don't use non seamless cube maps
     bool seamlessCubes;
+
+    /// play pal 4
+    bool playpal4;
   };
 
 }
