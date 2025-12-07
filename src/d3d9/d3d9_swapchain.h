@@ -122,7 +122,6 @@ namespace dxvk {
 
     bool                      m_dialog;
     bool                      m_lastDialog = false;
-    bool                      m_pal4;
 
     HWND                      m_window   = nullptr;
     HMONITOR                  m_monitor  = nullptr;

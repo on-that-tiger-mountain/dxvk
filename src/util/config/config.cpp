@@ -621,11 +621,6 @@ namespace dxvk {
     { R"(\\yso_win\.exe$)", {{
       { "d3d9.maxFrameLatency",              "1" },
     }} },
-    /* pal 4                                    *
-     * Chinese Paladin 4                        */
-    { R"(\\(pal4|Pal4|PAL4|launch)\.exe$)", {{
-      { "d3d9.playpal4",                  "True" },
-    }} },
   }};
 
 

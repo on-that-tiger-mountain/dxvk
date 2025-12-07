@@ -74,7 +74,6 @@ namespace dxvk {
     this->deviceLocalConstantBuffers    = config.getOption<bool>        ("d3d9.deviceLocalConstantBuffers",    false);
     this->allowDirectBufferMapping      = config.getOption<bool>        ("d3d9.allowDirectBufferMapping",      true);
     this->seamlessCubes                 = config.getOption<bool>        ("d3d9.seamlessCubes",                 false);
-    this->playpal4                      = config.getOption<bool>        ("d3d9.playpal4",                      false);
 
     // If we are not Nvidia, enable general hazards.
     this->generalHazards = adapter != nullptr
