@@ -161,6 +161,9 @@ namespace dxvk {
     /// Don't use non seamless cube maps
     bool seamlessCubes;
 
+    /// play pal 4
+    bool playpal4;
+
     /// Enable depth texcoord Z (Dref) scaling (D3D8 quirk)
     int32_t drefScaling;
   };
