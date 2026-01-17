@@ -4,7 +4,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   artifacts-mingw-w64:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.0.4
 
     steps:
     - name: Checkout code
@@ -19,7 +19,7 @@ jobs:
 
     - name: Build release
       id: build-release
-      uses: Joshua-Ashton/arch-mingw-github-action@v8
+      uses: Joshua-Ashton/arch-mingw-github-action@v9
       with:
         command: |
           export VERSION_NAME="${GITHUB_REF##*/}-${GITHUB_SHA##*/}"
@@ -35,7 +35,7 @@ jobs:
         if-no-files-found: error
 
   artifacts-steamrt-sniper:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.0.4
     container: registry.gitlab.steamos.cloud/steamrt/sniper/sdk:beta
 
     steps:
@@ -66,7 +66,7 @@ jobs:
         if-no-files-found: error
 
   merge-artifacts:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.0.4
     needs: [artifacts-mingw-w64, artifacts-steamrt-sniper]
     steps:
       - name: Get version
