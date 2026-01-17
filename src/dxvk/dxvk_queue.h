@@ -56,7 +56,26 @@ namespace dxvk {
     DxvkSubmitStatus*   status;
     DxvkSubmitInfo      submit;
     DxvkPresentInfo     present;
-    DxvkTimelineSemaphoreValues timelines;
+  };
+
+
+  /**
+   * \brief Timeline semaphore pair
+   *
+   * One semaphore for each queue.
+   */
+  struct DxvkTimelineSemaphores {
+    VkSemaphore graphics = VK_NULL_HANDLE;
+    VkSemaphore transfer = VK_NULL_HANDLE;
+  };
+
+
+  /**
+   * \brief Timeline semaphore values
+   */
+  struct DxvkTimelineSemaphoreValues {
+    uint64_t graphics = 0u;
+    uint64_t transfer = 0u;
   };
 
 
