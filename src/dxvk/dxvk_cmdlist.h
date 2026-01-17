@@ -92,6 +92,13 @@ namespace dxvk {
             VkPipelineStageFlags2 stageMask);
 
     /**
+     * \brief Adds a fence to signal
+     * \param [in] fence The fence
+     */
+    void signalFence(
+            VkFence               fence);
+
+    /**
      * \brief Adds a command buffer to execute
      * \param [in] commandBuffer The command buffer
      */
@@ -124,6 +131,7 @@ namespace dxvk {
 
   private:
 
+    VkFence                                     m_fence = VK_NULL_HANDLE;
     small_vector<VkSemaphoreSubmitInfo, 4>      m_semaphoreWaits;
     small_vector<VkSemaphoreSubmitInfo, 4>      m_semaphoreSignals;
     small_vector<VkCommandBufferSubmitInfo, 4>  m_commandBuffers;
