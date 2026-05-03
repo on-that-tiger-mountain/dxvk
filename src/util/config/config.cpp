@@ -754,6 +754,11 @@ namespace dxvk {
       { "d3d9.textureMemory",               "16" },
       { "d3d9.allowDirectBufferMapping",    "False" },
     }} },
+    /* pal 4                                    *
+     * Chinese Paladin 4                        */
+    { R"(\\(pal4|Pal4|PAL4|launch)\.exe$)", {{
+      { "d3d9.playpal4",                  "True" },
+    }} },
     /* Heroes of Annihilated Empires            *
      * Has issues with texture rendering and    *
      * video memory detection otherwise.        */
