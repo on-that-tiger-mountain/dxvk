@@ -40,10 +40,6 @@ namespace dxvk {
       const RGNDATA* pDirtyRegion,
             DWORD    dwFlags);
 
-#ifdef _WIN32
-    HRESULT BlitGDI(HWND Window);
-#endif
-
     HRESULT STDMETHODCALLTYPE GetFrontBufferData(IDirect3DSurface9* pDestSurface);
 
     HRESULT STDMETHODCALLTYPE GetBackBuffer(
@@ -107,7 +103,6 @@ namespace dxvk {
     
     RECT                      m_srcRect;
     RECT                      m_dstRect;
-    bool                      m_partialCopy = false;
 
     DxvkSubmitStatus          m_presentStatus;
 
@@ -130,8 +125,6 @@ namespace dxvk {
     wsi::DxvkWindowState      m_windowState;
 
     double                    m_displayRefreshRate = 0.0;
-
-    bool                      m_warnedAboutFallback = false;
 
     void PresentImage(UINT PresentInterval);
 

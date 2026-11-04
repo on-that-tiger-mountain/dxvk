@@ -165,9 +165,7 @@ namespace dxvk {
     createInfo.hBitmap     = nullptr;
     createInfo.hDc         = nullptr;
 
-    if (D3DKMTCreateDCFromMemory(&createInfo))
-      Logger::err("D3D9: Failed to create GDI DC");
-
+    D3DKMTCreateDCFromMemory(&createInfo);
     DeleteDC(createInfo.hDeviceDc);
 
     // These should now be set...

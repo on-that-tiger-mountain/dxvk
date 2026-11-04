@@ -7342,8 +7342,7 @@ namespace dxvk {
       "    - Format:             ", backBufferFmt, "\n"
       "    - Auto Depth Stencil: ", pPresentationParameters->EnableAutoDepthStencil ? "true" : "false", "\n",
       "                ^ Format: ", EnumerateFormat(pPresentationParameters->AutoDepthStencilFormat), "\n",
-      "    - Windowed:           ", pPresentationParameters->Windowed ? "true" : "false", "\n",
-      "    - Swap effect:        ", pPresentationParameters->SwapEffect, "\n"));
+      "    - Windowed:           ", pPresentationParameters->Windowed ? "true" : "false", "\n"));
 
     if (backBufferFmt != D3D9Format::Unknown) {
       if (!IsSupportedBackBufferFormat(backBufferFmt)) {
